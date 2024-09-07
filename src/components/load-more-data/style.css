@@ -1,0 +1,17 @@
+.load-more-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+.product{
+    border: 3px gray solid;
+    
+}
+.product:hover{
+    box-shadow: 10px 10px 15px gray;
+}
