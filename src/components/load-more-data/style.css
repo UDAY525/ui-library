@@ -10,7 +10,9 @@
 }
 .product{
     border: 3px gray solid;
-    
+    padding: auto;
+    display: flex;
+    flex-direction: column;
 }
 .product:hover{
     box-shadow: 10px 10px 15px gray;
