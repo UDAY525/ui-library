@@ -6,6 +6,7 @@ import ImageSlider from './components/image-slider';
 import LoadMoreData from './components/load-more-data';
 import TreeView from './components/tree-ui';
 import menus from './components/tree-ui/data';
+import OtpHolder from './components/otp-entry/OtpHolder';
 function App() {
   return (
     <div className="App">
@@ -29,7 +30,10 @@ function App() {
       {/* <LoadMoreData/> */}
 
       {/* Tree View */}
-      <TreeView menus={menus}/>
+      {/* <TreeView menus={menus}/> */}
+
+      {/* OTP Entry */}
+      <OtpHolder/>
     </div>
   );
 }

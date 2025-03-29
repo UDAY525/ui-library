@@ -1,0 +1,41 @@
+.otp-screen {
+    background-color: cadetblue;
+    min-height: 100dvh;
+    padding-top: 10rem;
+}
+
+.otp-screen div {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.otp-screen div:nth-child(2) span{
+    color: #e50000d1;
+}
+
+input {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:hover {
+    border-color: #007bff;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+input:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+
+input:last-child {
+    border-radius: 0 5px 5px 0;
+}
