@@ -1,0 +1,144 @@
+* {
+    background-color: #552186;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+h2 {
+    color: #4a4a4a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.folderItem {
+    color: #ff9800;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.folderItem:hover {
+    color: #e65100;
+}
+
+.fileItem {
+    color: #2196f3;
+    margin: 0.5rem 0;
+    cursor: default;
+}
+
+.fileItem:hover {
+    text-decoration: underline;
+}
+
+.folderItem::before {
+    content: "📁 ";
+    margin-right: 0.5rem;
+}
+
+.fileItem::before {
+    content: "📄 ";
+    margin-right: 0.5rem;
+}
+
+.folderItem, .fileItem {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.folderItem:hover, .fileItem:hover {
+    background-color: #f0f0f0;
+}
+
+.folder-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-left: 2px solid #ccc;
+    max-height: 90vh; /* Limit height to fit within the viewport */
+    overflow-y: auto; /* Add vertical scroll for overflowing content */
+    overflow-x: hidden; /* Remove horizontal scroll */
+    scrollbar-width: thin; /* For modern browsers */
+    scrollbar-color: #ccc #f4f4f9; /* Custom scrollbar colors */
+}
+
+.folder-container.empty {
+    border-left: none; /* Remove vertical line for empty folders */
+}
+
+/* Custom scrollbar styling for Webkit browsers */
+.folder-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.folder-container::-webkit-scrollbar-track {
+    background: #f4f4f9;
+}
+
+.folder-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.add-folder-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.add-file-button {
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-file-button:hover {
+    background-color: #45a049;
+}
+
+.remove-item-button {
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-item-button:hover {
+    background-color: #d32f2f;
+}
+
+.folder-container:hover .add-folder-icon,
+.folder-container:hover .add-file-button,
+.folder-container:hover .remove-item-button {
+    display: inline-block; /* Show buttons on hover */
+}
+
+.add-folder-icon,
+.add-file-button,
+.remove-item-button {
+    display: none; /* Hide buttons by default */
+}

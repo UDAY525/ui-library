@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Accordion from './components/accordian';
 import RandomColor from './components/randomColor';
 import StarRatings from './components/starRatings';
@@ -7,6 +7,7 @@ import LoadMoreData from './components/load-more-data';
 import TreeView from './components/tree-ui';
 import menus from './components/tree-ui/data';
 import OtpHolder from './components/otp-entry/OtpHolder';
+import FilesFolder from './components/folder';
 function App() {
   return (
     <div className="App">
@@ -33,7 +34,10 @@ function App() {
       {/* <TreeView menus={menus}/> */}
 
       {/* OTP Entry */}
-      <OtpHolder/>
+      {/* <OtpHolder/> */}
+      
+      {/* Files Folder */}
+      <FilesFolder/>
     </div>
   );
 }
