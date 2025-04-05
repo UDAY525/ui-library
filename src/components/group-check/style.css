@@ -1,0 +1,30 @@
+.check-container {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-left: 1px solid #ccc; /* Add a subtle vertical line for hierarchy */
+}
+
+.checkbox-content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px; /* Add spacing between the checkbox and label */
+    margin-bottom: 5px;
+}
+
+.checkbox-content input {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.checkbox-content span {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.checkbox-content span:hover {
+    color: #007bff; /* Add hover effect for the label */
+}

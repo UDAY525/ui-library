@@ -8,6 +8,7 @@ import TreeView from './components/tree-ui';
 import menus from './components/tree-ui/data';
 import OtpHolder from './components/otp-entry/OtpHolder';
 import FilesFolder from './components/folder';
+import CheckBox from './components/group-check';
 function App() {
   return (
     <div className="App">
@@ -37,7 +38,10 @@ function App() {
       {/* <OtpHolder/> */}
       
       {/* Files Folder */}
-      <FilesFolder/>
+      {/* <FilesFolder/> */}
+
+      {/* Parent Child CheckBox */}
+      <CheckBox/>
     </div>
   );
 }
