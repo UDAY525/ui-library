@@ -24,6 +24,7 @@ h1 {
     background-color: #4caf50;
     height: 2px;
     width: 0;
+    transition: width 0.3s ease-in-out;
 }
 
 .checker-items {
