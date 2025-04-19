@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './style.css';
+// import './style.css';
 import addFolderIcon from './add-folder.png'; // Import the image properly
 
 const FolderItem = ({ data }) => {

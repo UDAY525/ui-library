@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../group-check/style.css";
+// import "../group-check/style.css";
 
 const checkBoxesData = [
   {

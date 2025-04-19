@@ -9,6 +9,7 @@ import menus from './components/tree-ui/data';
 import OtpHolder from './components/otp-entry/OtpHolder';
 import FilesFolder from './components/folder';
 import CheckBox from './components/group-check';
+import CheckerStage from "./components/checker-stage/CheckerStage";
 function App() {
   return (
     <div className="App">
@@ -41,7 +42,10 @@ function App() {
       {/* <FilesFolder/> */}
 
       {/* Parent Child CheckBox */}
-      <CheckBox/>
+      {/* <CheckBox/> */}
+
+    {/*  Checket stage */}
+      <CheckerStage/>
     </div>
   );
 }
