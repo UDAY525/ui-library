@@ -1,0 +1,133 @@
+.pag-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pag-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+}
+
+.pag-message {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin: 2rem 0;
+}
+
+.pag-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.pag-product-item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.pag-product-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pag-product-item-card .pag-card-img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.pag-product-item-card .pag-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+}
+
+.pag-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 2.5rem 0;
+}
+
+.pag-button-container .pag-page-button {
+    min-width: 2.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.pag-button-container .pag-page-button:hover {
+    background-color: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.pag-button-container .pag-active-page {
+    background-color: #f97316;
+    color: #ffffff;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.pag-button-container .pag-page-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.pag-button-container .pag-nav-button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    background-color: #374151;
+    color: #ffffff;
+    border-color: #374151;
+}
+
+.pag-button-container .pag-nav-button:hover {
+    background-color: #4b5563;
+    border-color: #4b5563;
+}
+
+.pag-button-container .pag-ellipsis {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #6b7280;
+    padding: 0.75rem;
+    pointer-events: none;
+}
+
+@media (max-width: 640px) {
+    .pag-button-container {
+        gap: 0.5rem;
+    }
+    .pag-page-button,
+    .pag-nav-button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}
