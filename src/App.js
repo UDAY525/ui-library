@@ -11,7 +11,8 @@
 // import CheckBox from './components/group-check';
 // import CheckerStage from "./components/checker-stage/CheckerStage";
 // import PaginationComp from "./components/pagination/PaginationComp";
-import Counter from "./components/counter-history/Counter";
+// import Counter from "./components/counter-history/Counter";
+import DropOutside from "./components/dropdown-outside/DropOutside";
 function App() {
   return (
     <div className="App">
@@ -53,7 +54,10 @@ function App() {
       {/* <PaginationComp/> */}
 
       {/* Counter with history */}
-      <Counter />
+      {/* <Counter /> */}
+
+      {/* Drop down close on outside click */}
+      <DropOutside />
     </div>
   );
 }
