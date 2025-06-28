@@ -10,16 +10,11 @@
 // import FilesFolder from './components/folder';
 // import CheckBox from './components/group-check';
 // import CheckerStage from "./components/checker-stage/CheckerStage";
-import PaginationComp from "./components/pagination/PaginationComp";
-import DragDropCards from './components/drag-drop-cards'; // Import statement
-
+// import PaginationComp from "./components/pagination/PaginationComp";
+import Counter from "./components/counter-history/Counter";
 function App() {
   return (
     <div className="App">
-      {/* Other existing components can remain if any */}
-      <h1>Drag and Drop Cards Example</h1>
-      <DragDropCards />
-      {/* Other existing components can remain if any */}
       {/* Accordian */}
       {/* <Accordion/> */}
 
@@ -44,18 +39,21 @@ function App() {
 
       {/* OTP Entry */}
       {/* <OtpHolder/> */}
-      
+
       {/* Files Folder */}
       {/* <FilesFolder/> */}
 
       {/* Parent Child CheckBox */}
       {/* <CheckBox/> */}
 
-    {/*  Checket stage */}
-    {/*  <CheckerStage/>*/}
+      {/*  Checket stage */}
+      {/*  <CheckerStage/>*/}
 
-        {/* Pagination  */}
-        <PaginationComp/>
+      {/* Pagination  */}
+      {/* <PaginationComp/> */}
+
+      {/* Counter with history */}
+      <Counter />
     </div>
   );
 }
