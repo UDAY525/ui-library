@@ -35,9 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1"
   }
 }
