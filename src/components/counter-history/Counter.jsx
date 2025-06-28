@@ -1,44 +1,66 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import "./style.css";
 
+const initialState = {
+  history: [0],
+  position: 0,
+};
+
+function reducer(state, action) {
+  const { history, position } = state;
+  const current = history[position];
+
+  switch (action.type) {
+    case "INCREMENT":
+      return {
+        history: [...history.slice(0, position + 1), current + 1],
+        position: position + 1,
+      };
+    case "DECREMENT":
+      return {
+        history: [...history.slice(0, position + 1), current - 1],
+        position: position + 1,
+      };
+    case "RESET":
+      return {
+        history: [0],
+        position: 0,
+      };
+    case "BACK":
+      return {
+        ...state,
+        position: Math.max(0, position - 1),
+      };
+    case "FORWARD":
+      return {
+        ...state,
+        position: Math.min(history.length - 1, position + 1),
+      };
+    default:
+      return state;
+  }
+}
+
 const Counter = () => {
-  const [history, setHistory] = useState([0]);
-  const [position, setPosition] = useState(0);
-
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { history, position } = state;
   const count = history[position];
-
-  const updateHistory = (newValue) => {
-    const newHistory = history.slice(0, position + 1);
-    setHistory([...newHistory, newValue]);
-    setPosition((prev) => prev + 1);
-  };
-
-  const increment = () => updateHistory(count + 1);
-  const decrement = () => updateHistory(count - 1);
-
-  const backNav = () => {
-    if (position > 0) setPosition(position - 1);
-  };
-
-  const forwardNav = () => {
-    if (position + 1 < history.length) setPosition(position + 1);
-  };
-
-  const reset = () => {
-    setHistory([0]);
-    setPosition(0);
-  };
 
   return (
     <div id="counter-history">
-      <h1>Counter with History</h1>
-      <p>This component displays a counter with undo/redo functionality.</p>
+      <h1>Counter with History (useReducer)</h1>
 
       <div className="controls">
-        <button onClick={backNav} disabled={position === 0}>
+        <button
+          onClick={() => dispatch({ type: "BACK" })}
+          disabled={position === 0}
+        >
           Back
         </button>
-        <button onClick={forwardNav} disabled={position + 1 === history.length}>
+        <button
+          onClick={() => dispatch({ type: "FORWARD" })}
+          disabled={position === history.length - 1}
+        >
           Forward
         </button>
       </div>
@@ -46,9 +68,13 @@ const Counter = () => {
       <div>Current value: {count}</div>
 
       <div className="controls">
-        <button onClick={reset}>Reset</button>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
+        <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+        <button onClick={() => dispatch({ type: "INCREMENT" })}>
+          Increment
+        </button>
+        <button onClick={() => dispatch({ type: "DECREMENT" })}>
+          Decrement
+        </button>
       </div>
 
       <div>
