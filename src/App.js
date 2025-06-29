@@ -14,7 +14,8 @@
 // import Counter from "./components/counter-history/Counter";
 // import DropOutside from "./components/dropdown-outside/DropOutside";
 // import InlineEditor from "./components/inline-editor/InlineEditor";
-import Form from "./components/form-validate/Form";
+// import Form from "./components/form-validate/Form";
+import FormCustom from "./components/form-custom-hook/FormCustom";
 function App() {
   return (
     <div className="App">
@@ -64,7 +65,11 @@ function App() {
       {/* Inline editor input */}
       {/* <InlineEditor /> */}
 
-      <Form />
+      {/* Form validations manual */}
+      {/* <Form /> */}
+
+      {/* Form valdations with custom hook */}
+      <FormCustom />
     </div>
   );
 }
