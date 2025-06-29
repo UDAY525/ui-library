@@ -12,7 +12,8 @@
 // import CheckerStage from "./components/checker-stage/CheckerStage";
 // import PaginationComp from "./components/pagination/PaginationComp";
 // import Counter from "./components/counter-history/Counter";
-import DropOutside from "./components/dropdown-outside/DropOutside";
+// import DropOutside from "./components/dropdown-outside/DropOutside";
+import InlineEditor from "./components/inline-editor/InlineEditor";
 function App() {
   return (
     <div className="App">
@@ -57,7 +58,10 @@ function App() {
       {/* <Counter /> */}
 
       {/* Drop down close on outside click */}
-      <DropOutside />
+      {/* <DropOutside /> */}
+
+      {/* Inline editor input */}
+      <InlineEditor />
     </div>
   );
 }

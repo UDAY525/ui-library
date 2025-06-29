@@ -1,0 +1,22 @@
+#inlineEditSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    border: 1px solid blanchedalmond;
+    width: min(80%, 50rem);
+    margin: auto;
+    div p, input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 1rem;
+        background-color: aliceblue;
+        padding: 8px;
+        width: 10rem;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+    }
+}
