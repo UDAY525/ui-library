@@ -1,0 +1,49 @@
+#formValidateSection{
+    min-height: 100vh;
+    h3 {
+        text-align: center;
+    }
+    .formCard {
+        background-color: bisque;
+        padding: 2rem;
+        .form {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: min(90%, 50rem);
+            input {
+                padding: 8px;
+                outline: none;
+                min-width: 20rem;
+            }
+            .field {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4px;
+                label {
+                    color: chocolate;
+                }
+                p {
+                    font-size: 0.75rem;
+                    color: red;
+                    margin: 0;
+                }
+            }
+            button {
+                background-color: lightskyblue;
+                padding:  0.75rem 2rem;
+                color:white;
+                border: none;
+                &:hover {
+                    background-color: blue;
+                    font-size: larger;
+                    transition: all 0.5s ease-in-out;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+}

@@ -6,14 +6,15 @@
 // import LoadMoreData from './components/load-more-data';
 // import TreeView from './components/tree-ui';
 // import menus from './components/tree-ui/data';
-// import OtpHolder from './components/otp-entry/OtpHolder';
+// import OtpHolder from "./components/otp-entry/OtpHolder";
 // import FilesFolder from './components/folder';
 // import CheckBox from './components/group-check';
 // import CheckerStage from "./components/checker-stage/CheckerStage";
 // import PaginationComp from "./components/pagination/PaginationComp";
 // import Counter from "./components/counter-history/Counter";
 // import DropOutside from "./components/dropdown-outside/DropOutside";
-import InlineEditor from "./components/inline-editor/InlineEditor";
+// import InlineEditor from "./components/inline-editor/InlineEditor";
+import Form from "./components/form-validate/Form";
 function App() {
   return (
     <div className="App">
@@ -40,7 +41,7 @@ function App() {
       {/* <TreeView menus={menus}/> */}
 
       {/* OTP Entry */}
-      {/* <OtpHolder/> */}
+      {/* <OtpHolder /> */}
 
       {/* Files Folder */}
       {/* <FilesFolder/> */}
@@ -61,7 +62,9 @@ function App() {
       {/* <DropOutside /> */}
 
       {/* Inline editor input */}
-      <InlineEditor />
+      {/* <InlineEditor /> */}
+
+      <Form />
     </div>
   );
 }
