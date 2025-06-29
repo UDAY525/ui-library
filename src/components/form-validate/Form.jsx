@@ -7,10 +7,12 @@ const Form = () => {
     { id: 2, type: "text", name: "Name", placeholder: "Enter your name" },
     { id: 3, type: "number", name: "Age", placeholder: "Enter your age" },
   ];
-  const initialState = formConfig.reduce(
-    (accumulate, field) => (accumulate[field] = "")
+  const [formData, setFormData] = useState(
+    formConfig.reduce((acc, field) => ({
+      ...acc,
+      [field]: "",
+    }))
   );
-  const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
   const formDataChangeHandler = (e, name) => {
     setFormData((prev) => ({ ...prev, [name]: e.target.value }));
