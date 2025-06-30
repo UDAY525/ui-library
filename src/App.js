@@ -15,7 +15,8 @@
 // import DropOutside from "./components/dropdown-outside/DropOutside";
 // import InlineEditor from "./components/inline-editor/InlineEditor";
 // import Form from "./components/form-validate/Form";
-import FormCustom from "./components/form-custom-hook/FormCustom";
+// import FormCustom from "./components/form-custom-hook/FormCustom";
+import FormZodValidate from "./components/form-zod-validation/FormZodValidate";
 function App() {
   return (
     <div className="App">
@@ -69,7 +70,10 @@ function App() {
       {/* <Form /> */}
 
       {/* Form valdations with custom hook */}
-      <FormCustom />
+      {/* <FormCustom /> */}
+
+      {/* Form validations with zod */}
+      <FormZodValidate />
     </div>
   );
 }
