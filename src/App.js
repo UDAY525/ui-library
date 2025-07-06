@@ -17,7 +17,8 @@
 // import Form from "./components/form-validate/Form";
 // import FormCustom from "./components/form-custom-hook/FormCustom";
 // import FormZodValidate from "./components/form-zod-validation/FormZodValidate";
-import CardFlip from "./components/card-flip/card-flip";
+// import CardFlip from "./components/card-flip/card-flip";
+import TabsInteractive from "./components/tabs-interactive/TabsInteractive";
 function App() {
   return (
     <div className="App">
@@ -77,7 +78,10 @@ function App() {
       {/* <FormZodValidate /> */}
 
       {/* Card flip animation */}
-      <CardFlip />
+      {/* <CardFlip /> */}
+
+      {/* Tabs interactive keyboard */}
+      <TabsInteractive />
     </div>
   );
 }

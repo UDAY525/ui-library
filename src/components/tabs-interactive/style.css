@@ -1,0 +1,38 @@
+.tabs-outer-container {
+    width: min(90%, 800px);
+    padding: 0.5rem;
+    height: min(90vh, 800px);
+    background-color: antiquewhite;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tabs-btns-nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: 8px;
+        button {
+            background-color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            &:hover {
+                background-color: aquamarine;
+                transition: all 0.5s ease-in-out;
+            }
+            &.active {
+                background-color: cornflowerblue;
+                color: white;
+            }
+        }
+    }
+    .tab-content {
+        margin-top: 2rem;
+        background-color: azure;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        box-sizing: border-box;
+        min-height: 200px;
+    }
+}
